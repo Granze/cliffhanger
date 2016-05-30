@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cliffhanger</title>
+    <!-- Chrome for Android theme color -->
+    <meta name="theme-color" content="#03A9F4">
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Tile color for Win8 -->
+    <meta name="msapplication-TileColor" content="#03A9F4">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Cliffhanger">
+    <link rel="icon" sizes="192x192" href="images/icons/icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Cliffhanger">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <link rel='stylesheet' href='main.css'>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Cliffhanger</h1>
+
+        <div class="mountain">
+          <div class="mountain-top">
+            <div class="mountain-cap"></div>
+          </div>
+        </div>
+        <div class="mountain-2">
+          <div class="mountain-top">
+            <div class="mountain-cap"></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <div id="select">
+          <label for="input-system">Grading System</label>
+          <div class="custom-select">
+            <select name="input-system" id="input-system">
+              <option value="0">USA (YDS)</option>
+              <option value="1">France</option>
+              <option value="2">Australia</option>
+              <option value="3">South Africa</option>
+              <option value="4">Germany (UIAA)</option>
+              <option value="5">United Kingdom</option>
+            </select>
+          </div>
+
+          <label for="origin">Grade</label>
+          <div class="custom-select">
+            <select name="grades" id="origin"></select>
+          </div>
+
+          <label for="output-system">to</label>
+          <div class="custom-select">
+            <select name="output-system" id="output-system">
+              <option value="0">USA (YDS)</option>
+              <option value="1">France</option>
+              <option value="2">Australia</option>
+              <option value="3">South Africa</option>
+              <option value="4">Germany (UIAA)</option>
+              <option value="5">United Kingdom</option>
+            </select>
+          </div>
+          <div id="converted"></div>
+        </div>
+      </div>
+
+    </div>
+    <script src="main.js"></script>
+  </body>
+
+</html>

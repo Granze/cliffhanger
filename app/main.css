@@ -1,0 +1,175 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: #795548;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  align-self: center;
+  align-items: center;
+}
+
+header {
+  position: relative;
+  background: #03A9F4;
+}
+
+h1 {
+  margin: 0;
+  padding: 50px 20px;
+  font-size: 3em;
+  color: #fff;
+}
+
+.content label {
+  font-weight: bold;
+}
+
+/* MOUNTAIN */
+.mountain, .mountain-2 {
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid #795548;
+  z-index: 2;
+  zoom: 1.4;
+}
+
+.mountain-2 {
+  right: 100px;
+  z-index: 1;
+  zoom: 1;
+  opacity: .9;
+}
+
+.mountain-top {
+  position: absolute;
+  right: -25px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 37px solid #ceeaf6;
+  z-index: 2;
+}
+.mountain-cap {
+  position: absolute;
+  top: 32px;
+  left: -16px;
+  border-left: 22px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 5px solid #795548
+}
+
+#converted {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  margin: 30px auto 10px auto;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  background: #212121;
+}
+
+/* select-css by Filamentgroup https://github.com/filamentgroup/select-css */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+  margin: 4px 0 20px 0;
+  border: 1px solid #bbb;
+  border-radius: .2em;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  background: #f3f3f3;
+  background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+
+.custom-select select {
+  width: 100%;
+  margin: 0;
+  outline: none;
+  padding: .6em .8em .5em .8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.custom-select::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  z-index: 2;
+  pointer-events: none;
+  display: none;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 7px solid #666;
+  margin-top: -3px;
+}
+
+.custom-select select:focus {
+  outline: none;
+  box-shadow: 0 0 1px 2px rgba(3, 169, 244, .9);
+}
+
+@supports ( -webkit-appearance: none ) or ( appearance: none )
+	or ( ( -moz-appearance: none ) and ( mask-type: alpha ) ) {
+  .custom-select::after {
+    display: block;
+  }
+
+  .custom-select select {
+    padding-right: 2em;
+    background: none;
+    border: 1px solid transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .custom-select select:focus {
+    border-color: #aaa;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  h1 {
+    padding: 20px;
+  }
+
+  .content label {
+    display: block;
+  }
+
+  .content .custom-select {
+    min-width: 70vw;
+  }
+
+  .mountain {
+    zoom: .8;
+  }
+
+  .mountain-2 {
+    zoom: .5;
+  }
+}
+

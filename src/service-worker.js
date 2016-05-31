@@ -1,15 +1,15 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('cliffhanger').then(cache => {
-      return cache.addAll([
+    caches.open('cliffhanger').then(cache =>
+      cache.addAll([
         '/',
         '/index.html',
         'main.css',
         'main.js'
       ])
-        .then(() => self.skipWaiting());
-    })
-  )
+        .then(() => self.skipWaiting())
+    )
+  );
 });
 
 self.addEventListener('activate', e => {
@@ -18,8 +18,6 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(response => {
-      return response || fetch(e.request);
-    })
+    caches.match(e.request).then(response => response || fetch(e.request))
   );
 });

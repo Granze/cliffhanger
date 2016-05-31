@@ -61,3 +61,5 @@ document.getElementById('select').addEventListener('change', function (e) {
 });
 
 init();
+
+//# sourceMappingURL=main.js.map

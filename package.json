@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Progressive Web App to convert climbing grades",
   "scripts": {
-    "babel": "babel -w src -d app",
+    "babel": "babel -w ./src/main.js -o ./app/main.js -s",
+    "uglify": "babel ./src/main.js | uglifyjs > ./app/main.js",
     "lint": "eslint --fix ./src",
-    "precache": "sw-precache --config=sw-precache-config.json --root=app"
+    "precache": "sw-precache --config=sw-precache-config.json --root=app",
+    "build": "npm run uglify && npm run precache",
+    "deploy": "firebase deploy",
+    "predeploy": "npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
@@ -13,7 +17,8 @@
     "eslint": "^2.11.1",
     "eslint-config-airbnb-base": "^3.0.1",
     "eslint-plugin-import": "^1.8.1",
-    "sw-precache": "^3.2.0"
+    "sw-precache": "^3.2.0",
+    "uglify-js": "^2.6.2"
   },
   "main": "index.html",
   "dependencies": {},

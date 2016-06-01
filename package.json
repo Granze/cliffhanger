@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Progressive Web App to convert climbing grades",
   "scripts": {
-    "babel": "babel -w ./src/main.js -o ./app/main.js -s",
+    "babel": "babel -w ./src/main.js -o ./app/main.js",
     "uglify": "babel ./src/main.js | uglifyjs > ./app/main.js",
     "lint": "eslint --fix ./src",
     "precache": "sw-precache --config=sw-precache-config.json --root=app",

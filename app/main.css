@@ -78,11 +78,8 @@ h1 {
   display: inline-block;
   min-width: 200px;
   margin: 4px 0 20px 0;
-  border: 1px solid #65463b;
-  border-radius: .2em;
-  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
-  background: #795548;
-  background: linear-gradient(to bottom, #b38675 0%, #795548 100%);
+  border: 2px solid #fff;
+  background: transparent;
 }
 .custom-select select {
   width: 100%;
@@ -110,7 +107,7 @@ h1 {
 }
 .custom-select select:focus {
   outline: none;
-  box-shadow: 0 0 1px 2px #fff;
+  box-shadow: 0 0 1px 2px #03A9F4;
 }
 @supports ( -webkit-appearance: none ) or ( appearance: none )
 	or ( ( -moz-appearance: none ) and ( mask-type: alpha ) ) {

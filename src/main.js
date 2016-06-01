@@ -11,14 +11,7 @@ let selectedInputSystem = 0;
 let selectedOutputSystem = 1;
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
-    .then(() => {
-      console.log('Service Worker Registered');
-    });
-
-  navigator.serviceWorker.ready.then(() => {
-    console.log('Service Worker Ready');
-  });
+  navigator.serviceWorker.register('/service-worker.js', { scope: '/' });
 }
 
 const convert = (i = selectedGrade) => {

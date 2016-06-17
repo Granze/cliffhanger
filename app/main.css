@@ -129,6 +129,26 @@ h1 {
     color: #000;
   }
 }
+
+#grade-type {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#grade-type button {
+  flex: 1;
+  padding: 10px 4px;
+  border: 2px solid #c68b76;
+  color: #fff;
+  background: #68493e;
+}
+
+#grade-type button.active {
+  font-weight: bold;
+  border: 2px solid #fff;
+  background: #68493e;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   h1 {

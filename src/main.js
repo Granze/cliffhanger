@@ -23,7 +23,8 @@ const convert = (i = selectedGrade) => {
 
 const fillGrades = () => {
   const optTemplate = grades.map((grade, index) =>
-    `<option value="${index}">${grade[selectedInputSystem]}</option>`);
+    `<option value="${index}">${grade[selectedInputSystem]}</option>`
+  );
 
   inputGrade.innerHTML = optTemplate.join('');
   inputGrade.selectedIndex = selectedGrade;
@@ -32,13 +33,20 @@ const fillGrades = () => {
 
 const fillLabels = () => {
   const optTemplate = labels.map((label, index) =>
-    `<option value="${index}">${label}</option>`);
+    `<option value="${index}">${label}</option>`
+  );
 
   inputSystem.innerHTML = optTemplate.join('');
   inputSystem.selectedIndex = selectedInputSystem;
   outputSystem.innerHTML = optTemplate.join('');
   outputSystem.selectedIndex = selectedOutputSystem;
   convert();
+};
+
+const activateButtons = () => {
+  document.querySelectorAll('#grade-type button').forEach(button => {
+    button.classList.toggle('active');
+  });
 };
 
 const init = () => {
@@ -65,20 +73,20 @@ document.getElementById('select').addEventListener('change', e => {
 
 document.getElementById('grade-type').addEventListener('click', e => {
   const nodeId = e.target.attributes.id.nodeValue;
+  activateButtons();
 
   if (nodeId === 'climbing-grades') {
     labels = climbingLabels;
     grades = climbingGrades;
     selectedInputSystem = 0;
     selectedOutputSystem = 1;
-    init();
   } else {
     labels = boulderLabels;
     grades = boulderingGrades;
     selectedInputSystem = 0;
     selectedOutputSystem = 1;
-    init();
   }
+  init();
 });
 
 init();

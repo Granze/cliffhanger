@@ -49,6 +49,12 @@ const activateButtons = () => {
   });
 };
 
+const reset = () => {
+  selectedInputSystem = 0;
+  selectedOutputSystem = 1;
+  selectedGrade = 0;
+};
+
 const init = () => {
   inputSystem.selectedIndex = selectedInputSystem;
   outputSystem.selectedIndex = selectedOutputSystem;
@@ -78,14 +84,11 @@ document.getElementById('grade-type').addEventListener('click', e => {
   if (nodeId === 'climbing-grades') {
     labels = climbingLabels;
     grades = climbingGrades;
-    selectedInputSystem = 0;
-    selectedOutputSystem = 1;
   } else {
     labels = boulderLabels;
     grades = boulderingGrades;
-    selectedInputSystem = 0;
-    selectedOutputSystem = 1;
   }
+  reset();
   init();
 });
 

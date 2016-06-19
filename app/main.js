@@ -53,6 +53,12 @@ var activateButtons = function activateButtons() {
   });
 };
 
+var reset = function reset() {
+  selectedInputSystem = 0;
+  selectedOutputSystem = 1;
+  selectedGrade = 0;
+};
+
 var init = function init() {
   inputSystem.selectedIndex = selectedInputSystem;
   outputSystem.selectedIndex = selectedOutputSystem;
@@ -82,14 +88,11 @@ document.getElementById('grade-type').addEventListener('click', function (e) {
   if (nodeId === 'climbing-grades') {
     labels = climbingLabels;
     grades = climbingGrades;
-    selectedInputSystem = 0;
-    selectedOutputSystem = 1;
   } else {
     labels = boulderLabels;
     grades = boulderingGrades;
-    selectedInputSystem = 0;
-    selectedOutputSystem = 1;
   }
+  reset();
   init();
 });
 

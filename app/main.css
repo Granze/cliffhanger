@@ -64,11 +64,10 @@ h1 {
 }
 #converted {
   padding: 20px 0;
-  margin: 30px auto 10px auto;
+  margin: 20px auto 10px auto;
   text-align: center;
-  font-size: 24px;
+  font-size: 50px;
   font-weight: bold;
-  background: #212121;
 }
 /* select-css by Filamentgroup https://github.com/filamentgroup/select-css */
 .custom-select {

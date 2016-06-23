@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   color: #fff;
-  background: #795548;
+  background: #03A9F4;
 }
 * {
   box-sizing: border-box;
@@ -17,57 +17,57 @@ html, body {
   display: flex;
   flex: 1;
   align-self: center;
-  align-items: center;
 }
 header {
-  position: relative;
-  background: #03A9F4;
+  margin-bottom: 30px;
+  padding: 30px;
 }
 h1 {
   margin: 0;
-  padding: 50px 20px;
-  font-size: 3em;
+  font-size: 30px;
+  text-align: center;
   color: #fff;
 }
 .content label { font-weight: bold; }
 .mountain, .mountain-2 {
   position: absolute;
   bottom: 0;
-  right: 4px;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 80px solid #795548;
+  right: -20px;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-bottom: 140px solid #906c60;
   z-index: 2;
-  zoom: 1.4;
+  zoom: 1.7;
 }
 .mountain-2 {
-  right: 100px;
+  right: 140px;
   z-index: 1;
-  zoom: 1;
+  zoom: 1.3;
   opacity: .9;
 }
 .mountain-top {
   position: absolute;
-  right: -25px;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 37px solid #ceeaf6;
+  right: -34px;
+  border-left: 33px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 51px solid #ceeaf6;
   z-index: 2;
 }
 .mountain-cap {
   position: absolute;
-  top: 32px;
-  left: -16px;
-  border-left: 22px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 5px solid #795548
+  top: 36px;
+  left: -26px;
+  border-left: 32px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 15px solid #906c60
 }
 #converted {
-  padding: 20px 0;
+  padding: 0 20px 0 20px;
   margin: 20px auto 10px auto;
   text-align: center;
   font-size: 50px;
   font-weight: bold;
+  color: #fff;
 }
 /* select-css by Filamentgroup https://github.com/filamentgroup/select-css */
 .custom-select {
@@ -135,21 +135,23 @@ h1 {
 #grade-type button {
   flex: 1;
   padding: 10px 4px;
-  border: 2px solid #c68b76;
+  border: 2px solid #fff;
   color: #fff;
-  background: #68493e;
+  font-size: 16px;
+  background-color: transparent;
 }
 
 #grade-type button.active {
   font-weight: bold;
   border: 2px solid #fff;
-  background: #68493e;
+  color: #03A9F4;
+  background: #fff;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   h1 {
-    padding: 20px;
+
   }
   .content label {
     display: block;
@@ -158,9 +160,11 @@ h1 {
     min-width: 70vw;
   }
   .mountain {
-    zoom: .8;
+    zoom: 1;
+    right: -50px;
   }
   .mountain-2 {
-    zoom: .5;
+    zoom: .7;
+    right: 100px;
   }
 }

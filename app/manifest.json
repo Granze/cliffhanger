@@ -2,7 +2,7 @@
   "name": "Cliffhanger",
   "short_name": "Cliffhanger",
   "theme_color": "#03a9f4",
-  "background_color": "#795548",
+  "background_color": "#03A9F4",
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",

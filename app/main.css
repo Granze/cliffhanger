@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   color: #fff;
   background: #03A9F4;
+  overflow: hidden;
 }
 * {
   box-sizing: border-box;
@@ -16,6 +17,7 @@ html, body {
 .content {
   display: flex;
   flex: 1;
+  position: relative;
   align-self: center;
 }
 header {
@@ -161,10 +163,10 @@ h1 {
   }
   .mountain {
     zoom: 1;
-    right: -50px;
+    right: -80px;
   }
   .mountain-2 {
     zoom: .7;
-    right: 100px;
+    right: 80px;
   }
 }
